@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService {
     List<UserDto> getUsers(List<Long> usersIds);
-    
+
     List<UserDto> getUsers(int from, int size);
 
     UserDto createUser(NewUserRequest user);

@@ -15,7 +15,6 @@ import ru.practicum.explorewithme.pageable.PageableByOffsetAndSize;
 import ru.practicum.explorewithme.repositories.categories.CategoryRepository;
 import ru.practicum.explorewithme.services.events.ThirdPartEventService;
 
-import java.util.Collection;
 import java.util.List;
 
 @Service

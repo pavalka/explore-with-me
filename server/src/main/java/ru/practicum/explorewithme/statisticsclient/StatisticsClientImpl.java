@@ -18,14 +18,11 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 import ru.practicum.explorewithme.dto.statistics.EndpointHit;
 import ru.practicum.explorewithme.dto.statistics.ViewStats;
 
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component

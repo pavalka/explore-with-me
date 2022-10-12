@@ -2,7 +2,6 @@ package ru.practicum.explorewithme.repositories.events;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
-import ru.practicum.explorewithme.entities.categories.Category;
 import ru.practicum.explorewithme.entities.events.Event;
 import ru.practicum.explorewithme.entities.events.Event_;
 

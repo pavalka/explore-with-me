@@ -20,7 +20,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @Transactional(readOnly = true)
-public class UserServiceImpl implements UserService, ThirdPartUserService{
+public class UserServiceImpl implements UserService, ThirdPartUserService {
     private final UserRepository userRepository;
 
     @Override

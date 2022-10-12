@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 import ru.practicum.explorewithme.entities.events.Event;
 import ru.practicum.explorewithme.entities.events.Event_;
-import ru.practicum.explorewithme.entities.users.User;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;

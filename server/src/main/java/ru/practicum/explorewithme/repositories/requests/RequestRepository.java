@@ -12,7 +12,6 @@ import ru.practicum.explorewithme.entities.users.User;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 
 public interface RequestRepository extends JpaRepository<Request, Long> {
     @Query("SELECT r.event.id AS requestId, COUNT(r.id) AS requestQuantity " +

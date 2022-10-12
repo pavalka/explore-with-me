@@ -250,4 +250,7 @@
 	</module>
 	<!--	<module name="NewlineAtEndOfFile"/>-->
 	<module name="SuppressWarningsFilter"/>
+	<module name="BeforeExecutionExclusionFileFilter">
+		<property name="fileNamePattern" value=".*[\\/]target[\\/].*$"/>
+	</module>
 </module>
