@@ -156,7 +156,7 @@ public class CommentServiceImpl implements CommentService {
             constraints = createOrAddConstraint(null, new SearchingByEventIds(filterParam.getEventIds()));
         }
         if (filterParam.getAuthorIds() != null) {
-            constraints = createOrAddConstraint(constraints, new SearchingByEventIds(filterParam.getEventIds()));
+            constraints = createOrAddConstraint(constraints, new SearchingByEventIds(filterParam.getAuthorIds()));
         }
         if (filterParam.getStatuses() != null) {
             constraints = createOrAddConstraint(constraints, new SearchingByStatus(filterParam.getStatuses()));

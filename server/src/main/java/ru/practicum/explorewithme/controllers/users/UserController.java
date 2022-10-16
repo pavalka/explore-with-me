@@ -126,9 +126,9 @@ public class UserController {
     }
 
     @DeleteMapping("/{userId}/comments/{comId}")
-    public CommentFullDto deleteComment(@PathVariable(name = "userId") long userId,
+    public void deleteComment(@PathVariable(name = "userId") long userId,
                                         @PathVariable(name = "comId") long commentId) {
-        return commentService.getCommentByUserAndId(userId, commentId);
+        commentService.deleteCommentByUser(userId, commentId);
     }
 
     @GetMapping("/{userId}/comments")
