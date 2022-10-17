@@ -1,0 +1,49 @@
+version: '3.9'
+services:
+  server:
+    build: server/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - main_db
+    environment:
+      - POSTGRES_HOST=main_db
+      - POSTGRES_HOST_PORT=5432
+      - STAT_SERVER_HOST=statistics
+      - STAT_SERVER_PORT=9090
+    env_file:
+      - server/server.env
+
+  statistics:
+    build: statistics/
+    ports:
+      - "9090:9090"
+    depends_on:
+      - stat_db
+    environment:
+      - POSTGRES_HOST=stat_db
+      - POSTGRES_HOST_PORT=5432
+    env_file:
+      - statistics/statistics.env
+
+  main_db:
+    image: postgres:14-alpine
+    ports:
+      - "5435:5432"
+    env_file:
+      - server/server.env
+    volumes:
+      - main_db:/var/lib/postgresql/data
+
+  stat_db:
+    image: postgres:14-alpine
+    ports:
+      - "5436:5432"
+    env_file:
+      - statistics/statistics.env
+    volumes:
+      - stat_db:/var/lib/postgresql/data
+
+volumes:
+  main_db:
+  stat_db:
